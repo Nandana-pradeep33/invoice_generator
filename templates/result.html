@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasho</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #191a1b;
+            padding-top: 56px; /* Adjusted for fixed navbar */
+        }
+
+        .navbar {
+            background-color: rgb(36, 37, 37);
+            color: white;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-text {
+            color:#ffffff;
+        }
+       .card-img-top{
+        padding: 20px;
+        height: 250px;
+        border-radius: 15px;
+       }
+        .card {
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .btn-custom-orange {
+    background-color: #ffA500; /* Set your desired orange color */
+    color: white; /* Text color */
+}  
+footer {  
+       margin-top: 5rem;
+            background-color: #171818; /* Black */
+            color: #ffA500; /* Orange */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 575.98px) {
+            .card {
+                width: 100%;
+               
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: #ed9a02;">Nasho</a>
+            <div class="ml-auto">
+                <span class="navbar-text text-white">
+                    <i class="fas fa-user"></i> {{name}}
+                </span>
+               
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container mt-4">
+        <!-- Card Deck -->
+        <div class="card-deck mt-5 ">
+            <!-- Card 1 -->
+            <div class="card mt-lg-5 ">
+              <img src="{{ url_for('static', filename='images/th.jpeg') }}" alt="Your Image" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Nike Sneakers</h5>
+                    <p class="card-text">Dont miss out !</p>
+                    <a href="{{ url_for('page2') }}"><button class="btn btn-custom-orange">Buy Now</button></a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card mt-lg-5">
+                <img src="{{ url_for('static', filename='images/sh2.jpeg') }}" class="card-img-top" alt="Card Image">
+                
+                <div class="card-body">
+                    <h5 class="card-title">Nike</h5>
+                    <p class="card-text">40% Off</p>
+                    <a href="{{ url_for('page2') }}"><button class="btn btn-custom-orange">Buy Now</button></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card mt-lg-5">
+                <img src="{{ url_for('static', filename='images/sh2.jpg') }}" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Jorden 1 retro</h5>
+                    <p class="card-text">Buy now at 20% off</p>
+                    <a href="{{ url_for('invoice1') }}"><button class="btn btn-custom-orange">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Nasho. All Rights Reserved.</p>
+        
+    </footer>
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

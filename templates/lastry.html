@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Sales Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .invoice-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+        }
+        .invoice-details {
+            margin-top: 80px;
+        }
+        .customer-details, .shipping-details {
+            margin-top: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .total-section {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .print-button{
+            width: 6rem;
+            height: 3rem;
+            background-color: #5b5b5b;
+            border: 0px;
+            border-radius: 6px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="printFunction()">Print Invoice</button>
+    <div class="invoice-container">
+        
+        <div class="header">
+           
+            <h1>NASHO</h1>
+            <p>Discover Joy in Every Purchase: Your Ultimate Shopping Destination</p>
+        </div>
+
+        <div class="invoice-details">
+            <p>Invoice Number: INV-001</p>
+            <p>Date: November 26, 2023</p>
+        </div>
+
+        <div class="customer-details">
+            <h2>Customer Details</h2>
+            <p>Customer Name: {{name}}</p>
+            <p>Customer Address: {{location}}</p>
+            
+            <p>Customer contact no: 123-456-789</p>
+        </div>
+
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nike Air Max</td>
+                    <td>1</td>
+                    <td>₹9,999</td>
+                    <td>₹9,999</td>
+                </tr>
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Sub Total</td>
+                    <td>₹9,999</td>
+                </tr>
+                <tr>
+                    <td colspan="3">SGST (10%)</td>
+                    <td>₹999.9</td>
+                </tr>
+                <tr>
+                    <td colspan="3">CGST (10%)</td>
+                    <td>₹999.9</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Grand Total</td>
+                    <td>₹11,998.8</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        
+        
+        <div class="payment-info">
+            <h3>Payment Method</h3>
+            
+            <p>Credit Card<br> Credit Card Type: Visa<br> Payment Transaction ID: <a href="#" style="color: #ff0000; text-decoration:underline;">9185969336</a><br>
+            </p>
+            <p style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; padding-top: 2rem; vertical-align: top; text-align: center;">
+                Thank you for shopping with us. Have a nice day...
+            </p>
+        </div>
+    </div>
+    <button onclick="printFunction()">click me</button>
+    <script>
+        function printFunction() { 
+          window.print(); 
+        }
+  </script>
+</body>
+</html>

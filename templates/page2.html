@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 50px;
+            margin-top: 16rem;
+        }
+
+        h1 {
+            color: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #generatePdfBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        Order Confirmed
+        <i class="fas fa-check-circle" style="color: #28a745; margin-left: 10px;"></i>
+    </h1>
+    
+      
+        <a href="{{ url_for('invoice1') }}"> <button type="submit" id="generatePdfBtn" >View Invoice</button></a>
+    
+   
+   
+</body>
+</html>
